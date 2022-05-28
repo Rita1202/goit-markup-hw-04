@@ -9,6 +9,7 @@
   --theme-light-background: #ffffff;
   --theme-dark-background: #f5f4fa;
   --border: #ececec;
+  --icon-social: #afb1b8;
 }
 h1,
 h2,
@@ -105,6 +106,7 @@ button {
   display: flex;
   margin-left: auto;
 }
+
 .logo {
   margin-right: 90px;
   padding-top: 24px;
@@ -144,6 +146,9 @@ button {
 }
 
 .header-contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -161,7 +166,17 @@ button {
 .header-contact-item:not(:last-child) {
   margin-right: 50px;
 }
-
+.header-contact-link:hover .header-contact-icon,
+.header-contact-link:focus .header-contact-icon {
+  fill: var(--accent-color);
+}
+.header-contact-icon {
+  margin-right: 10px;
+  fill: var(--secondary-text-color-theme-light);
+}
+.page-header-main {
+  border: none;
+}
 /* ================ /HEADER ================  */
 
 /* ================ HERO ================  */
@@ -200,9 +215,17 @@ button {
 }
 
 .hero-page {
+  max-width: 1600px;
   padding-bottom: 200px;
   padding-top: 200px;
-  background-color: var(--hero-background);
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-size: contain;
   text-align: center;
 }
 
@@ -234,8 +257,18 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--secondary-text-color-theme-light);
 }
+
+.about-us-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--theme-dark-background);
+  margin-bottom: 30px;
+}
+
 /* ================ /ABOUT US ================  */
 /* ================ WHAT WE DO ================  */
 .what-we-do-list {
@@ -283,14 +316,84 @@ button {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.team-social-link {
+}
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-list-icon {
+  fill: var(--icon-social);
+}
+.team-social-link:hover .social-list-icon,
+.team-social-link:focus .social-list-icon {
+  fill: var(--primary-text-color-theme-dark);
+}
 /* ================ /OUR TEAM ================  */
+
+/* ================ CLIENTS ================  */
+.clients-list {
+  display: flex;
+  width: calc((100%-150) / 6);
+}
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  height: 92px;
+  border: 1px solid var(--icon-social);
+  border-radius: 4px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  fill: var(--icon-social);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+/* ================ /CLIENTS ================  */
 
 /* ================ FOOTER ================  */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--hero-background);
+}
+.footer-container {
+  display: flex;
+  /* align-items: center; */
+}
+.wrapper-first {
+  margin-right: 70px;
+}
+.wrapper-second {
+  padding-top: 12px;
 }
 .footer .logo {
   display: inline-block;
@@ -316,6 +419,23 @@ button {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.description-social-link {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-text-color-theme-dark);
+}
+.team-social-link-footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.social-list-icon-footer {
+  fill: var(--primary-text-color-theme-dark);
 }
 /* ================ /FOOTER ================  */
 
