@@ -225,8 +225,9 @@ button {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/hero.jpg");
-  background-size: contain;
+  background-size: cover;
   text-align: center;
+  background-repeat: no-repeat;
 }
 
 /* ================ /HERO ================  */
